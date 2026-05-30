@@ -11,12 +11,3 @@ bandit = Bandit()
 
 for _ in range(10):
     print(bandit.pull(2))
-
-# Dumb Agent : Always choose random arm.
-total_reward = 0
-for _ in range(1000):
-    arm = np.random.randint(4)
-    reward = bandit.pull(arm)
-    total_reward+= reward
-
-print(total_reward)
